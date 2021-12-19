@@ -10,7 +10,13 @@ function App({ login }) {
   }, []);
 
   if (data) {
-    return <div>{JSON.stringify(data)}</div>;
+    return (
+      <div>
+        <h2>{data.name}</h2>
+        <p>{data.location}</p>
+        <img src={data.avatar_url} alt="Eve Porcello" />
+      </div>
+    );
   } else {
     return <div>No User Found</div>;
   }
